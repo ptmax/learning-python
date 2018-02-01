@@ -12,7 +12,7 @@ def getHTMLText(url):
         return ""
 
 def fillUnivList(ulist,html):
-    soup = BeautifulSoup(html,"lxml")
+    soup = BeautifulSoup(html,"lxml")#html.parser解析错误
     for tr in soup.find('tbody').children:
         if isinstance(tr,bs4.element.Tag):
             tds=tr.find_all('td')
